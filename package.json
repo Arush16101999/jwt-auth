@@ -4,7 +4,7 @@
   "main": "index.js",
   "scripts": {
     "devStart": "nodemon jwt.js",
-    "devStart2": "nodemon jwt2.js"
+    "devStart2": "nodemon authServer.js"
   },
   "keywords": [],
   "author": "",
