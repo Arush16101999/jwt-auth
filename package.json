@@ -3,7 +3,8 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "devStart": "nodemon jwt.js"
+    "devStart": "nodemon jwt.js",
+    "devStart2": "nodemon jwt2.js"
   },
   "keywords": [],
   "author": "",
