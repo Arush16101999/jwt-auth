@@ -19,6 +19,11 @@ app.post("/token", (req, res) => {
   });
 });
 
+app.delete("/logout", (req, res) => {
+  refreshTokens = refreshTokens.filter((token) => token !== req.body.token);
+  res.sendStatus(204);
+});
+
 app.post("/login", (req, res) => {
   // Authenticate User
   const username = req.body.username;
@@ -31,7 +36,7 @@ app.post("/login", (req, res) => {
 });
 
 function generateAccessToken(user) {
-  return jwt.sign(user, process.env.ACCESS_TOKEN, { expiresIn: "30s" });
+  return jwt.sign(user, process.env.ACCESS_TOKEN, { expiresIn: "15s" });
 }
 
 app.listen(4000);
